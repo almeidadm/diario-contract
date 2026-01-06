@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+diario_contract/base.py
+diario_contract/version.py
+diario_contract.egg-info/PKG-INFO
+diario_contract.egg-info/SOURCES.txt
+diario_contract.egg-info/dependency_links.txt
+diario_contract.egg-info/requires.txt
+diario_contract.egg-info/top_level.txt

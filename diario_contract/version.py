@@ -1,0 +1,3 @@
+__all__ = ["CONTRACT_VERSION"]
+
+CONTRACT_VERSION = "1.0.0"

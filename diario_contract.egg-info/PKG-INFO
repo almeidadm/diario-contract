@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: diario-contract
+Version: 1.0.0
+Summary: Shared data contracts for Diario RAG ETL
+Requires-Python: <3.13,>3.12
+Requires-Dist: pydantic>=2.6
