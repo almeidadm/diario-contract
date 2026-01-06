@@ -1,4 +1,4 @@
-from diario_contract.version import CONTRACT_VERSION
+from diario_contract.version import __version__
 
 def test_contract_version_defined():
-    assert CONTRACT_VERSION.count(".") == 2
+    assert str(__version__).count(".") == 2

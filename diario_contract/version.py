@@ -1,3 +1,3 @@
-__all__ = ["CONTRACT_VERSION"]
+from importlib.metadata import version
 
-CONTRACT_VERSION = "1.0.0"
+__version__ = version("diario-contract")
