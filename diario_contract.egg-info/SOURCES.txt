@@ -1,5 +1,6 @@
 README.md
 pyproject.toml
+diario_contract/__init__.py
 diario_contract/base.py
 diario_contract/version.py
 diario_contract.egg-info/PKG-INFO
@@ -7,3 +8,18 @@ diario_contract.egg-info/SOURCES.txt
 diario_contract.egg-info/dependency_links.txt
 diario_contract.egg-info/requires.txt
 diario_contract.egg-info/top_level.txt
+diario_contract/article/__init__.py
+diario_contract/article/article.py
+diario_contract/article/content.py
+diario_contract/article/metadata.py
+diario_contract/article/parquet.py
+diario_contract/chunk/__init__.py
+diario_contract/embedding/__init__.py
+diario_contract/enums/__init__.py
+diario_contract/enums/content_type.py
+diario_contract/gazette/__init__.py
+diario_contract/gazette/edition.py
+diario_contract/gazette/metadata.py
+diario_contract/gazette/parquet.py
+diario_contract/parser/__init__.py
+tests/test_schema_stability.py

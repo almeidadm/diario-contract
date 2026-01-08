@@ -2,6 +2,10 @@
 #    uv pip compile pyproject.toml -o requirements.lock
 annotated-types==0.7.0
     # via pydantic
+numpy==1.26.4
+    # via pyarrow
+pyarrow==15.0.0
+    # via diario-contract (pyproject.toml)
 pydantic==2.12.5
     # via diario-contract (pyproject.toml)
 pydantic-core==2.41.5
