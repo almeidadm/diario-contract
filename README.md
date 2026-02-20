@@ -26,4 +26,4 @@ pip install git@github.com:almeidadm/diario-contract.git==1.*
 
 ## Contract Version
 
-Current: 1.0.0
+Current: 1.1.0
