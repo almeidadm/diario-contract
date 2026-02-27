@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here.
 
+## [1.1.2] - 2026-02-26
+
+### Changed
+- Updated pyarrow dependency to 22.0.0
+
 ## [1.1.1] - 2026-02-26
 
 ### Added
