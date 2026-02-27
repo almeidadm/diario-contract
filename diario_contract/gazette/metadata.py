@@ -1,10 +1,12 @@
+from datetime import date
+
 from diario_contract.base import ContractModel
 
 class GazetteMetadata(ContractModel):
     """Metadados de uma edição do diário."""
 
     edition_id: str
-    publication_date: str
+    publication_date: date
     edition_number: int
     supplement: bool
     edition_type_id: int

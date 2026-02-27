@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here.
 
-## [1.1.0] - 2026-02-20
+## [1.1.1] - 2026-02-26
 
 ### Added
 - Lifecycle contracts: ParsedArticle, TextChunk, EmbeddedChunk, RetrievedDocument, RAGAnswer
@@ -15,6 +15,11 @@ All notable changes to this project are documented here.
 
 ### Fixed
 - GazetteEdition articles default now uses default_factory
+
+## [1.1.0] - 2026-02-20
+
+### Changed
+Update README.md file
 
 ## [1.0.0] - 2026-01-05
 ### Added

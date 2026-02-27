@@ -1,3 +1,5 @@
+from datetime import date
+
 from pydantic import Field
 
 from diario_contract.base import ContractModel
@@ -8,14 +10,14 @@ class GazetteEdition(ContractModel):
     """Edição completa do diário com seus artigos."""
 
     metadata: GazetteMetadata
-    articles: list[Article] = []
+    articles: list[Article] = Field(default_factory=list)
 
     @property
     def edition_id(self) -> str:
         return self.metadata.edition_id
 
     @property
-    def publication_date(self) -> str:
+    def publication_date(self) -> date:
         return self.metadata.publication_date
 
     @property

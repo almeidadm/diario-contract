@@ -14,7 +14,9 @@ diario_contract/article/content.py
 diario_contract/article/metadata.py
 diario_contract/article/parquet.py
 diario_contract/chunk/__init__.py
+diario_contract/chunk/text_chunk.py
 diario_contract/embedding/__init__.py
+diario_contract/embedding/embedded_chunk.py
 diario_contract/enums/__init__.py
 diario_contract/enums/content_type.py
 diario_contract/gazette/__init__.py
@@ -22,4 +24,10 @@ diario_contract/gazette/edition.py
 diario_contract/gazette/metadata.py
 diario_contract/gazette/parquet.py
 diario_contract/parser/__init__.py
+diario_contract/parser/parsed_article.py
+diario_contract/rag/__init__.py
+diario_contract/rag/answer.py
+diario_contract/retrieval/__init__.py
+diario_contract/retrieval/retrieved_document.py
+tests/test_contract_models.py
 tests/test_schema_stability.py
