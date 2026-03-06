@@ -9,6 +9,7 @@ from diario_contract.enums.content_type import ContentType
 from diario_contract.gazette.edition import GazetteEdition
 from diario_contract.gazette.metadata import GazetteMetadata
 from diario_contract.parser.parsed_article import ParsedArticle
+from diario_contract.parser.parsed_chunk import NamedEntityMention, ParsedChunk
 from diario_contract.rag.answer import RAGAnswer
 from diario_contract.retrieval.retrieved_document import RetrievedDocument
 
@@ -59,6 +60,41 @@ def test_lifecycle_contracts_instantiate():
         parsed_text="texto",
         parsed_at=now,
     )
+    mention = NamedEntityMention(
+        entity_id="org-prefeitura-sjc",
+        text="Prefeitura Municipal",
+        canonical_name="Prefeitura Municipal de Sao Jose dos Campos",
+        label="ORG",
+        source_label="ORG",
+        start_char=0,
+        end_char=21,
+        source="spacy+catalog",
+    )
+    ParsedChunk(
+        chunk_id="chunk-1",
+        identifier="ID-1",
+        article_id="a-1",
+        edition_id="ed-1",
+        municipality="sp_sao_jose_dos_campos",
+        publication_date=date(2024, 1, 1),
+        title="Titulo",
+        section="Secao",
+        organization="Orgao",
+        content_type=ContentType.TEXT,
+        content_path="raw/path",
+        chunk_i=0,
+        chunk_strategy="regex_v2",
+        act_type="LEI",
+        start_offset=0,
+        end_offset=10,
+        text="texto",
+        has_table=False,
+        processed_at=now,
+        batch_id="batch-1",
+        entities=[mention],
+        ner_model="pt_core_news_lg",
+        entity_catalog_version=1,
+    )
     TextChunk(
         chunk_id="c-1",
         article_id="a-1",
@@ -88,3 +124,23 @@ def test_lifecycle_contracts_instantiate():
         sources=["c-1"],
         generated_at=now,
     )
+
+
+def test_parsed_chunk_entities_default_factory():
+    chunk = ParsedChunk(
+        chunk_id="chunk-1",
+        identifier="ID-1",
+        edition_id="ed-1",
+        municipality="sp_sao_jose_dos_campos",
+        publication_date=date(2024, 1, 1),
+        content_type=ContentType.TEXT,
+        content_path="raw/path",
+        chunk_i=0,
+        chunk_strategy="regex_v2",
+        act_type="LEI",
+        start_offset=0,
+        end_offset=10,
+        text="texto",
+    )
+
+    assert chunk.entities == []

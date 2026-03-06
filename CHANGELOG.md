@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here.
 
+## [1.2.0] - 2026-03-06
+
+### Added
+- New parser-specific contracts: `ParsedChunk` and `NamedEntityMention`
+- Support for chunk-level NER metadata in parser outputs
+
+### Changed
+- Exported parser-specific contracts from package namespaces
+- Added local-checkout version fallback for uninstalled test environments
+
 ## [1.1.2] - 2026-02-26
 
 ### Changed

@@ -1,3 +1,6 @@
-from importlib.metadata import version
+from importlib.metadata import PackageNotFoundError, version
 
-__version__ = version("diario-contract")
+try:
+    __version__ = version("diario-contract")
+except PackageNotFoundError:
+    __version__ = "1.2.0"
