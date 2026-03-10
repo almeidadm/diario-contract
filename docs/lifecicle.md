@@ -6,9 +6,11 @@ Article
   ↓
 ParsedArticle
   ↓
-TextChunk
+ParsedChunk
   ↓
-EmbeddedChunk
+Act (silver/gold)
+  ↓
+ActEmbedding (gold vectors)
   ↓
 RetrievedDocument
   ↓
