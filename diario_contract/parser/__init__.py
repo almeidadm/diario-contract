@@ -1,4 +1,5 @@
-from diario_contract.parser.parsed_article import ParsedArticle
-from diario_contract.parser.parsed_chunk import NamedEntityMention, ParsedChunk
+__all__ = ["ParsedArticle", "ParsedChunk", "NamedEntityMention"]
 
-__all__ = ["ParsedArticle", "NamedEntityMention", "ParsedChunk"]
+from diario_contract.parser.named_entity import NamedEntityMention
+from diario_contract.parser.parsed_article import ParsedArticle
+from diario_contract.parser.parsed_chunk import ParsedChunk
